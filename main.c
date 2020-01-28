@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -136,12 +136,12 @@ void Licz(STOS **wierzch)
 	while (1)
 	{
 		system("cls");
-		printf("\nPodaj liczbe w postaci RE IM (np. 1 2 odzielając je spacją), gdzie pierwsza liczba to część rzeczywista, a druga to część urojona\n");
-		printf("\nLiczby potwierdź wciskając Enter\n");
+		printf("Podaj liczbe w postaci RE IM (np. 1 2 odzielając je spacją), gdzie pierwsza liczba to część rzeczywista, a druga to część urojona\n");
+		printf("\nLiczby potwierdź wciskając Enter");
 		wyswietl(*wierzch);
 		znak = 0;
 		gets(tablica);
-		i = sscanf(tablica, "%lf %lf\n", &Re, &Im);
+		i = sscanf(tablica, "%lf %lf", &Re, &Im);
 		wczytana.re = Re;
 		wczytana.im = Im;
 		if (i == 0 || i == -1)
@@ -176,11 +176,11 @@ void Licz(STOS **wierzch)
 					break;
 				default:
 					printf("Nieprawidłowy znak\n");
-					break;
 					
+						system("exit");
 					
 				}
-				break;
+				
 			}
 			else if (i == 2)
 			{
@@ -213,7 +213,7 @@ int main()
 		printf("Kalkulator liczb zespolonych\n");
 	
 			Licz(&wierzch);
-            
+            system("pause");
             break;
 			
 	}
