@@ -136,12 +136,12 @@ void Licz(STOS **wierzch)
 	while (1)
 	{
 		system("cls");
-		printf("Podaj liczbe w postaci RE IM (np. 1 2 odzielając je spacją), gdzie pierwsza liczba to część rzeczywista, a druga to część urojona\n");
-		printf("\nLiczby potwierdź wciskając Enter");
+		printf("\nPodaj liczbe w postaci RE IM (np. 1 2 odzielając je spacją), gdzie pierwsza liczba to część rzeczywista, a druga to część urojona\n");
+		printf("\nLiczby potwierdź wciskając Enter\n");
 		wyswietl(*wierzch);
 		znak = 0;
 		gets(tablica);
-		i = sscanf(tablica, "%lf %lf", &Re, &Im);
+		i = sscanf(tablica, "%lf %lf\n", &Re, &Im);
 		wczytana.re = Re;
 		wczytana.im = Im;
 		if (i == 0 || i == -1)
